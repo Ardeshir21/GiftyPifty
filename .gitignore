@@ -1,0 +1,15 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+letsencrypt/
+media/
+migrations/
+venv
+staticfiles
+/static
+.env
+.vs
+db.sqlite3
+GiftyPiftyKEYS.txt
