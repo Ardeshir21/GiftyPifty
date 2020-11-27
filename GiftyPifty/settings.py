@@ -11,19 +11,40 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+# This part of code is for keep secret variables secure and also it to change some parameters for Development/Production
+# It returns the secrets_dict which can be used in the main code
+# This file is different in Server and my local PC
+secret_file = 'GiftyPiftyKEYS.txt'
+secrets = ['SECRET_KEY', 'DEBUG' , 'DATABASE_NAME', 'DATABASE_USERNAME', 'DATABASE_PASSWORD',
+ 'EMAIL_HOST', 'EMAIL_HOST_USER', 'EMAIL_HOST_PASSWORD']
+SECRETS_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+filepath = os.path.join(SECRETS_DIR, secret_file)
+secrets_dict = {}
+with open(filepath) as fp:
+   line = fp.readline()
+   for item in secrets:
+       secrets_dict[item] = line.strip()
+       line = fp.readline()
+
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7oz(@nmeap5)6vuf+1tjzk(fk*bjq)vq+a@a=kx@j9+^u1^4&m'
+SECRET_KEY = secrets_dict['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# The DEBUG value in 'RealEstateKEYS.txt' is an empty string ''
+# I used bool() to return False
+DEBUG = bool(secrets_dict['DEBUG'])
 
 ALLOWED_HOSTS = []
 
@@ -37,6 +58,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # My apps
+    'apps.baseApp',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +77,7 @@ ROOT_URLCONF = 'GiftyPifty.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,10 +96,15 @@ WSGI_APPLICATION = 'GiftyPifty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# Digital Ocean and local Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': secrets_dict['DATABASE_NAME'],
+        'USER': secrets_dict['DATABASE_USERNAME'],
+        'PASSWORD': secrets_dict['DATABASE_PASSWORD'],
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -114,7 +142,46 @@ USE_L10N = True
 USE_TZ = True
 
 
+SITE_ID = 1
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
+STATICFILES_FINDERS = ['django.contrib.staticfiles.finders.FileSystemFinder',
+                        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+                        # other finders
+                        # 'compressor.finders.CompressorFinder',
+                        ]
+# COMPRESS_PRECOMPILERS = (
+#     ('text/x-scss', 'django_libsass.SassCompiler'),
+# )
+COMPRESS_OFFLINE = True
+LIBSASS_OUTPUT_STYLE = 'compressed'
+
 STATIC_URL = '/static/'
+
+# This for local environment which tells Django where and what folders contains static files.
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+
+# The root for collecting all static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# This is for production use only.
+# https://docs.djangoproject.com/en/1.10/ref/contrib/staticfiles/#manifeststaticfilesstorage
+if DEBUG == False:
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+
+# The root for uploaded files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# Email settings
+EMAIL_HOST = secrets_dict['EMAIL_HOST']
+EMAIL_PORT = 465
+EMAIL_HOST_USER = secrets_dict['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = secrets_dict['EMAIL_HOST_PASSWORD']
+EMAIL_USE_SSL = True

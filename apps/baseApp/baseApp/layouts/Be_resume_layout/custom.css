@@ -1,0 +1,153 @@
+#Top_bar.is-sticky {
+  height: 80px;
+}
+
+#Top_bar .menu>li {
+  margin-top: 5px;
+}
+
+/* For Public Button */
+#change-view-btn {
+  margin-top: 25px;
+}
+
+#change-view-btn span {
+  background: green;
+  width: 78px;
+  text-align: center;
+}
+
+#change-view-btn span:before {
+  background: blue;
+}
+
+#Top_bar.is-sticky #change-view-btn {
+  margin-top: 15px;
+}
+
+/* For Private Button */
+#change-view-btn-p {
+  margin-top: 25px;
+}
+
+#change-view-btn-p span {
+  background: blue;
+  width: 78px;
+  text-align: center;
+}
+
+#change-view-btn-p span:before {
+  background: green;
+}
+
+#Top_bar.is-sticky #change-view-btn-p {
+  margin-top: 15px;
+}
+
+/* Buttons */
+#edit-btn {
+  position: absolute;
+  bottom: 10px;
+  float: right;
+  right: 10px;
+  z-index: 10;
+}
+
+#edit-btn-1 {
+  color: red!important;
+  font-size: 30px!important;
+}
+
+#edit-btn-2 {
+  color: green!important;
+  font-size: 20px!important;
+}
+
+#delete-btn {
+  position: absolute;
+  bottom: -40px;
+  float: right;
+  right: 10px;
+  z-index: 10;
+}
+
+#delete-btn-1 {
+  color: red!important;
+  font-size: 30px!important;
+}
+
+#delete-btn-2 {
+  color: green!important;
+  font-size: 14px!important;
+}
+
+/* Education buttons */
+#edit-btn-education {
+  position: absolute;
+  bottom: 65px;
+  float: right;
+  right: 10px;
+  z-index: 10;
+}
+
+.timeline_items li:nth-child(even) #edit-btn-education {
+  bottom: 65px;
+  float: right;
+  left: 10px;
+}
+
+
+#edit-btn-1-education {
+  color: red!important;
+  font-size: 30px!important;
+}
+
+
+
+#edit-btn-2-education {
+  color: green!important;
+  font-size: 20px!important;
+}
+
+#delete-btn-education {
+  position: absolute;
+  bottom: 15px;
+  float: right;
+  right: 10px;
+  z-index: 10;
+}
+
+.timeline_items li:nth-child(even) #delete-btn-education {
+  bottom: 15px;
+  float: right;
+  left: 10px;
+}
+
+#delete-btn-1-education {
+  color: red!important;
+  font-size: 30px!important;
+}
+
+#delete-btn-2-education {
+  color: green!important;
+  font-size: 14px!important;
+}
+
+#education-description {
+  font-size: 13px;
+  word-break: break-word;
+  margin-bottom: 25px;
+}
+
+.timeline_items li:nth-child(even) #education-description{
+  text-align: right;
+}
+
+.grade {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.timeline_items li:nth-child(even) .grade {
+  text-align: right;
+}
