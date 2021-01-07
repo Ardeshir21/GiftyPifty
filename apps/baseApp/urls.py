@@ -17,7 +17,7 @@ app_name = 'baseApp'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    # path('properties/<int:pk>/', views.AssetSingleView.as_view(), name='propertyView'),
+    path('<int:pk>/<slug:product_slug>/', views.ProductDetailView.as_view(), name='productView'),
 
     # AJAX test
     # path('ajaxtest/', views.AJAX_TEST.as_view(), name='ajax_test'),

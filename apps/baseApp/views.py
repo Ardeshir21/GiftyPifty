@@ -21,3 +21,33 @@ def get_extra_context():
 # Index View
 class IndexView(generic.TemplateView):
     template_name = 'baseApp/layouts/cafe/index.html'
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # Append shared extraContext
+        context.update(get_extra_context())
+        context['featured_products'] = models.Product.objects.filter(featured=True, active=True)
+        return context
+
+class ProductDetailView(generic.DetailView):
+    context_object_name = 'product'
+    model = models.Product
+    template_name = 'baseApp/layouts/cafe/product.html'
+    query_pk_and_slug = True
+    slug_url_kwarg = 'product_slug'
+    pk_url_kwarg = 'pk'
+
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # Append shared extraContext
+        context.update(get_extra_context())
+        # This returns __str__ of the object
+        # context['page_title'] = self.get_object()
+        # context['page_slug'] = self.kwargs['product']
+        # context['page_url_detector'] = 'three level depth url'
+        # context['products'] = models.Product.objects.filter(category__slug=self.kwargs['category'], status=True).exclude(slug=self.kwargs['product'])
+
+        return context

@@ -1,0 +1,61 @@
+{% extends "baseApp/layouts/cafe/base.html" %}
+{% load static %}
+
+{% block head_title %}
+  <title>PPPP</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+{% endblock head_title %}
+
+
+{% block body_content %}
+<!-- Main Content -->
+<div id="Content">
+    <div class="content_wrapper clearfix">
+        <div class="sections_group">
+            <div class="entry-content">
+
+                <div class="section section-border-bottom sections_style_3">
+                    <div class="section_wrapper clearfix">
+                        <div class="items_group clearfix">
+                            <!-- One Second (1/2) Column -->
+                            <div class="column one-second column_image ">
+                                <div class="image_frame no_link scale-with-grid no_border">
+                                    <div class="image_wrapper">
+                                      {% for item in product.images.all %}
+                                        <img class="scale-with-grid" src="{{item.image}}" alt="" width="493" height="563" />
+                                      {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- One Second (1/2) Column -->
+                            <div class="column one-second column_column ">
+                                <div class="column_attr align_center">
+                                    <div style="margin: 0 3%;">
+                                        <hr class="no_line hrmargin_b_60" />
+                                        <h3>Original</h3>
+                                        <h2>{{product.name}}</h2>
+                                        <hr class="no_line hrmargin_b_30" />
+                                        <div class="image_frame no_link scale-with-grid alignnone no_border">
+                                            <div class="image_wrapper"><img class="scale-with-grid" src="content/cafe/images/home_cafe_sep.png" alt="" width="34" height="29" />
+                                            </div>
+                                        </div>
+                                        <hr class="no_line hrmargin_b_30" />
+                                        <h6>Donec blandit mauris aliquet felis sagittis, non imperdiet dolor volutpat. Etiam iaculis felis metus, vel tristique enim sodales non. In vitae mi a nunc nullam.</h6>
+                                        <p>
+                                          {{product.description|safe}}
+                                        </p>
+                                        <hr class="no_line hrmargin_b_40" />
+                                        <a class="button button_theme button_js" href="{{product.main_url}}"><span class="button_label">Order This</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body_content %}

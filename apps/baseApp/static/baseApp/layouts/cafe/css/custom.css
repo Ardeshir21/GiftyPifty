@@ -1,0 +1,7 @@
+#replacementPartsFitmentBullet, #hsx-rpp-bullet-fits-message {
+  display: none;
+}
+
+#Content > div > div > div > div > div > div > div.column.one-second.column_column > div > div > ul > li {
+  text-align: left;
+}
