@@ -2,7 +2,7 @@ from django.contrib import admin
 from django import forms
 from django.db import models
 from .models import (Affiliate,
-                    Category, SubCategory, Ocassion, Interest, Tag,
+                    Category, SubCategory, Ocassion, Interest, Tag, Recipient,
                     Product, ProductImages,
                     )
 
@@ -56,6 +56,9 @@ class InterestAdmin(admin.ModelAdmin):
 class TagAdmin(admin.ModelAdmin):
     list_display = ['id', 'name']
 
+class RecipientAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name']
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Affiliate, AffiliateAdmin)
 admin.site.register(Category, CategoryAdmin)
@@ -63,3 +66,4 @@ admin.site.register(SubCategory, SubCategoryAdmin)
 admin.site.register(Ocassion, OcassionAdmin)
 admin.site.register(Interest, InterestAdmin)
 admin.site.register(Tag, TagAdmin)
+admin.site.register(Recipient, RecipientAdmin)
