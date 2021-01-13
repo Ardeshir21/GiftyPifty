@@ -30,7 +30,7 @@ class ProductPage():
         if price is not None:
             price = price.string.strip()
             price = float(price.replace('$', ''))
-        print(price)
+
         # Descripton: About this item - List of bullets
         description_ul = str(self.page_soup.select_one('#feature-bullets > ul'))
 
