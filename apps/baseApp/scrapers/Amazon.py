@@ -25,9 +25,9 @@ class ProductPage():
             # Server Error
             print(page.status_code)
             if page.status_code == 503:
-                return None
+                self.page_soup = None
         # When the request is not a valid URL
-        except: return None
+        except: self.page_soup = None
         self.page_soup = BeautifulSoup(page.content, 'html.parser')
 
 

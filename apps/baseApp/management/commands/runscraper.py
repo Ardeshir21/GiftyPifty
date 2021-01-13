@@ -13,7 +13,7 @@ class Command(BaseCommand):
             product_scraped_object = Amazon.ProductPage(product.main_url)
 
             # if the Soup exists
-            if product_scraped_object is not None:
+            if product_scraped_object.page_soup is not None:
                 product_info = product_scraped_object.information()
                 # insert new information into product
                 country_location = product_info['Location']
