@@ -6,22 +6,25 @@ class ProductPage():
     def __init__(self, product_link):
         try:
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+                'User-Agent': 'Apache/2.4.34 (Ubuntu) OpenSSL/1.1.1 (internal dummy connection)',
                 'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                'Accept-Language' : 'en-US,en;q=0.9',
-                'pragma': 'no-cache',
-                'cache-control': 'no-cache',
-                'Accept-Encoding' : "gzip, deflate, br",
-                "Sec-Fetch-Site": "same-origin",
-                "Sec-Fetch-Mode": "navigate",
-                "Sec-Fetch-User": "?1",
-                "Sec-Fetch-Dest": "document",
-                'referer': 'https://www.amazon.com/',
-                "Connection": "keep-alive",
-                "Upgrade-Insecure-Requests": "1",
-                'DNT' : '1', # Do Not Track Request Header
+                'Accept-Language' : '*',
+                # 'pragma': 'no-cache',
+                # 'cache-control': 'no-cache',
+                # 'Accept-Encoding' : "gzip, deflate, br",
+                # "Sec-Fetch-Site": "same-origin",
+                # "Sec-Fetch-Mode": "navigate",
+                # "Sec-Fetch-User": "?1",
+                # "Sec-Fetch-Dest": "document",
+                # 'referer': 'https://www.amazon.com/',
+                # "Connection": "keep-alive",
+                # "Upgrade-Insecure-Requests": "1",
+                # 'DNT' : '1', # Do Not Track Request Header
                 }
             page = requests.get(product_link, headers=headers)
+            # Server Error
+            if page.status_code == 503:
+                return None
         # When the request is not a valid URL
         except: return None
         self.page_soup = BeautifulSoup(page.content, 'html.parser')
