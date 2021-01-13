@@ -23,6 +23,7 @@ class ProductPage():
                 }
             page = requests.get(product_link, headers=headers)
             # Server Error
+            print(page.status_code)
             if page.status_code == 503:
                 return None
         # When the request is not a valid URL
@@ -33,12 +34,12 @@ class ProductPage():
     def information(self):
         # Country
         country = self.page_soup.select_one('#glow-ingress-line2')
-        if country is not None:
+        if country not None:
             country = country.text.strip()
 
         # Price
         price = self.page_soup.find("span", attrs={'id':'priceblock_ourprice'})
-        if price is not None:
+        if price not None:
             price = price.string.strip()
             price = float(price.replace('$', ''))
 
@@ -47,7 +48,7 @@ class ProductPage():
 
         # First Image
         image = self.page_soup.select_one('#landingImage')
-        if image is not None:
+        if image not None:
             image = image['data-old-hires']
 
         # result
