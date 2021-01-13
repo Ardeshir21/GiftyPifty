@@ -24,13 +24,13 @@ class ProductPage():
         country = self.page_soup.select_one('#glow-ingress-line2')
         if country is not None:
             country = country.text.strip()
-            
+
         # Price
         price = self.page_soup.find("span", attrs={'id':'priceblock_ourprice'})
         if price is not None:
             price = price.string.strip()
             price = float(price.replace('$', ''))
-
+        print(price)
         # Descripton: About this item - List of bullets
         description_ul = str(self.page_soup.select_one('#feature-bullets > ul'))
 
