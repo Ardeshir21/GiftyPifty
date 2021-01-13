@@ -6,20 +6,20 @@ class ProductPage():
     def __init__(self, product_link):
         try:
             headers = {
-                'User-Agent': 'Apache/2.4.34 (Ubuntu) OpenSSL/1.1.1 (internal dummy connection)',
+                'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
                 'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
                 'Accept-Language' : '*',
                 # 'pragma': 'no-cache',
-                # 'cache-control': 'no-cache',
-                # 'Accept-Encoding' : "gzip, deflate, br",
+                'cache-control': 'no-cache',
+                'Accept-Encoding' : "gzip, deflate, br",
                 # "Sec-Fetch-Site": "same-origin",
                 # "Sec-Fetch-Mode": "navigate",
                 # "Sec-Fetch-User": "?1",
                 # "Sec-Fetch-Dest": "document",
-                # 'referer': 'https://www.amazon.com/',
+                'referer': 'https://www.amazon.com/',
                 # "Connection": "keep-alive",
-                # "Upgrade-Insecure-Requests": "1",
-                # 'DNT' : '1', # Do Not Track Request Header
+                "Upgrade-Insecure-Requests": "1",
+                'DNT' : '1', # Do Not Track Request Header
                 }
             page = requests.get(product_link, headers=headers)
             # Server Error
