@@ -11,7 +11,6 @@ class Command(BaseCommand):
         all_products = models.Product.objects.all()
         for product in all_products:
             product_scraped_object = Amazon.ProductPage(product.main_url)
-            print(product_scraped_object.page_soup)
 
             # if the URL exists
             if product_scraped_object is not None:

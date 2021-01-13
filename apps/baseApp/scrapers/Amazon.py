@@ -6,10 +6,19 @@ class ProductPage():
     def __init__(self, product_link):
         try:
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
                 'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                'Accept-Language' : 'en-US,en;q=0.5',
-                'Accept-Encoding' : 'gzip',
+                'Accept-Language' : 'en-US,en;q=0.9',
+                'pragma': 'no-cache',
+                'cache-control': 'no-cache',
+                'Accept-Encoding' : "gzip, deflate, br",
+                "Sec-Fetch-Site": "same-origin",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-User": "?1",
+                "Sec-Fetch-Dest": "document",
+                'referer': 'https://www.amazon.com/',
+                "Connection": "keep-alive",
+                "Upgrade-Insecure-Requests": "1",
                 'DNT' : '1', # Do Not Track Request Header
                 'Connection' : 'close'
                 }
@@ -35,7 +44,9 @@ class ProductPage():
         description_ul = str(self.page_soup.select_one('#feature-bullets > ul'))
 
         # First Image
-        image = self.page_soup.select_one('#landingImage')['data-old-hires']
+        image = self.page_soup.select_one('#landingImage')
+        if image is not None:
+            image = image['data-old-hires']
 
         # result
         result = {
