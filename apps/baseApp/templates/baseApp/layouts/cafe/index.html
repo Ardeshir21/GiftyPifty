@@ -28,7 +28,7 @@
                                                     <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" data-version="5.0.4.1">
                                                         <ul>
                                                           {% for item in featured_products|slice:":" %}
-                                                            {% for pic in item.images.all %}
+                                                            {% for pic in item.images.all|slice:":1" %}
                                                               <li data-index="{{pic.pk}}" data-link="{% url "baseApp:productView" product_slug=item.slug pk=item.pk %}" data-target="_blank" data-slideindex="back" data-transition="fadetorightfadefromleft" data-slotamount="4" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="2000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
                                                                 <img src="{{pic.image}}" alt="" width="620" height="450" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                               </li>
@@ -47,7 +47,7 @@
                                                     <div id="rev_slider_3_2" class="rev_slider fullwidthabanner" data-version="5.0.4.1">
                                                         <ul>
                                                           {% for item in featured_products|slice:":" %}
-                                                            {% for pic in item.images.all %}
+                                                            {% for pic in item.images.all|slice:":1" %}
                                                               <li data-index="{{pic.pk}}" data-link="{% url "baseApp:productView" product_slug=item.slug pk=item.pk %}" data-target="_blank" data-slideindex="back" data-transition="fadetorightfadefromleft" data-slotamount="4" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="2000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
                                                                   <img src="{{pic.image}}" alt="" width="620" height="450" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                               </li>
@@ -66,7 +66,7 @@
                                                     <div id="rev_slider_4_3" class="rev_slider fullwidthabanner" data-version="5.0.4.1">
                                                         <ul>
                                                           {% for item in featured_products|slice:":" %}
-                                                            {% for pic in item.images.all %}
+                                                            {% for pic in item.images.all|slice:":1" %}
                                                               <li data-index="{{pic.pk}}" data-link="{% url "baseApp:productView" product_slug=item.slug pk=item.pk %}" data-target="_blank" data-slideindex="back" data-transition="fadetorightfadefromleft" data-slotamount="4" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="2000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
                                                                   <img src="{{pic.image}}" alt="" width="620" height="450" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                               </li>
@@ -95,7 +95,7 @@
                                                                 <img src="{% static "baseApp/layouts/cafe/images/home_cafe_slider_a2.png" %}" alt="" width="400" height="290" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                             </li>
                                                             {% for item in featured_products|slice:":" %}
-                                                              {% for pic in item.images.all %}
+                                                              {% for pic in item.images.all|slice:":1" %}
                                                                 <li data-index="{{pic.pk}}" data-link="{% url "baseApp:productView" product_slug=item.slug pk=item.pk %}" data-target="_blank" data-slideindex="back" data-transition="fadetorightfadefromleft" data-slotamount="4" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="2000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
                                                                     <img src="{{pic.image}}" alt="" width="620" height="450" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                                 </li>
@@ -114,7 +114,7 @@
                                                     <div id="rev_slider_6_5" class="rev_slider fullwidthabanner" data-version="5.0.4.1">
                                                         <ul>
                                                           {% for item in featured_products|slice:":" %}
-                                                            {% for pic in item.images.all %}
+                                                            {% for pic in item.images.all|slice:":1" %}
                                                               <li data-index="{{pic.pk}}" data-link="{% url "baseApp:productView" product_slug=item.slug pk=item.pk %}" data-target="_blank" data-slideindex="back" data-transition="fadetorightfadefromleft" data-slotamount="4" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="2000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
                                                                   <img src="{{pic.image}}" alt="" width="620" height="450" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                               </li>
@@ -135,7 +135,7 @@
                                                     <div id="rev_slider_2_6" class="rev_slider fullwidthabanner" data-version="5.0.4.1">
                                                         <ul>
                                                           {% for item in featured_products|slice:":" %}
-                                                            {% for pic in item.images.all %}
+                                                            {% for pic in item.images.all|slice:":1" %}
                                                               <li data-index="{{pic.pk}}" data-link="{% url "baseApp:productView" product_slug=item.slug pk=item.pk %}" data-target="_blank" data-slideindex="back" data-transition="fadetorightfadefromleft" data-slotamount="4" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="2000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
                                                                   <img src="{{pic.image}}" alt="" width="620" height="450" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                               </li>

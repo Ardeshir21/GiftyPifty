@@ -6,7 +6,7 @@ class ProductPage():
     def __init__(self, product_link):
         try:
             headers = {
-                'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',
                 'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
                 'Accept-Language' : '*',
                 # 'pragma': 'no-cache',
@@ -21,7 +21,12 @@ class ProductPage():
                 "Upgrade-Insecure-Requests": "1",
                 'DNT' : '1', # Do Not Track Request Header
                 }
-            page = requests.get(product_link, headers=headers)
+
+            # proxies = {
+            #   'http': '103.241.227.110:6666',
+            # }
+
+            page = requests.get(product_link, headers=headers, proxies=proxies)
             # Server Error
             print(page.status_code)
             if page.status_code == 503:
