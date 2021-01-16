@@ -18,6 +18,7 @@ class Command(BaseCommand):
                 product_info = product_scraped_object.information()
                 # insert new information into product
                 product.price = product_info['Price']
+                product.active = True 
                 # Deactivate the product if does not have the Price
                 if product_info['Price'] is None:
                     product.active = False

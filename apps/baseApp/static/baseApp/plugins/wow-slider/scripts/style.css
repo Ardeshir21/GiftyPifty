@@ -22,10 +22,10 @@
 /*
 |--------------------------------------------------------------------------
 |  1.0 Base
-|  
+|
 |--------------------------------------------------------------------------
 |
-| 
+|
 |
 */
 
@@ -33,46 +33,46 @@
 /* #Fullscreen layout
 =============================== */
 
-#wowslider-container1.fullscreen-wow { 
+#wowslider-container1.fullscreen-wow {
 	display: block;
-	zoom: 1; 
+	zoom: 1;
 	position: relative;
 	width: 100%;
 	max-width: 100%;
 	max-height:none;
 	margin:0px auto 0px;
-	z-index:90;
+	z-index:10;
 	text-align:left;
 	font-size: 10px;
 	text-shadow: none;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
-	box-sizing: content-box; 
+	box-sizing: content-box;
 }
 * html #wowslider-container1.fullscreen-wow { width:1600px }
 
 /* #Boxed layout
 =============================== */
 
-#wowslider-container1.boxed-wow { 
+#wowslider-container1.boxed-wow {
 	display: table;
-	zoom: 1; 
+	zoom: 1;
 	position: relative;
 	width: 100%;
 	max-width: 1000px;
 	max-height:450px;
 	margin:0px auto 0px;
-	z-index:90;
+	z-index:10;
 	text-align:left;
 	font-size: 10px;
 	text-shadow: none;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
-	box-sizing: content-box; 
+	box-sizing: content-box;
 }
 * html #wowslider-container1.boxed-wow { width:922px }
 
-.boxed-wow img { 
+.boxed-wow img {
 	max-width:none !important;
 }
 
@@ -81,7 +81,7 @@
 
 #wowslider-container1 .ws_images ul {
 	position:relative;
-	width: 10000%; 
+	width: 10000%;
 	height:100%;
 	left:0;
 	list-style:none;
@@ -144,10 +144,10 @@
 	display: inline-block !important;
 }
 
-#wowslider-container1 a { 
-	text-decoration: none; 
-	outline: none; 
-	border: none; 
+#wowslider-container1 a {
+	text-decoration: none;
+	outline: none;
+	border: none;
 }
 
 #wowslider-container1 .ws_effect {
@@ -181,10 +181,10 @@
 /*
 |--------------------------------------------------------------------------
 |  2.0 Browser Fullscreen
-|  
+|
 |--------------------------------------------------------------------------
 |
-| 
+|
 |
 */
 
@@ -226,10 +226,10 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 /*
 |--------------------------------------------------------------------------
 |  3.0 Navigation Arrows
-|  
+|
 |--------------------------------------------------------------------------
 |
-| 
+|
 |
 */
 
@@ -245,12 +245,12 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 #wowslider-container1 a.ws_prev,
 #wowslider-container1 a.ws_next {
 	opacity:0.6;
-	transition: all .2s ease;	
+	transition: all .2s ease;
 }
 
 #wowslider-container1 a.ws_prev:hover,
 #wowslider-container1 a.ws_next:hover {
-	opacity:0.9	
+	opacity:0.9
 }
 
 #wowslider-container1 a.ws_prev:before {
@@ -281,10 +281,10 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 /*
 |--------------------------------------------------------------------------
 |  4.0 Play Pause
-|  
+|
 |--------------------------------------------------------------------------
 |
-| 
+|
 |
 */
 
@@ -301,7 +301,7 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 
 #wowslider-container1 .ws_playpause {
 	opacity:0.6;
-	transition: all .2s ease;	
+	transition: all .2s ease;
 }
 
 #wowslider-container1 .ws_playpause:hover {
@@ -326,19 +326,19 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 /*
 |--------------------------------------------------------------------------
 |  5.0 Bullets
-|  
+|
 |--------------------------------------------------------------------------
 |
-| 
+|
 |
 */
 
-#wowslider-container1  .ws_bullets { 
+#wowslider-container1  .ws_bullets {
 	float: left;
 	position:absolute;
 	z-index:70;
 	margin-right: 6em;
-	padding: 5px; 
+	padding: 5px;
 }
 
 #wowslider-container1  .ws_bullets div {
@@ -349,7 +349,7 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 
 #wowslider-container1 .ws_bullets a.ws_selbull, #wowslider-container1 .ws_bullets a:hover {
 	background-position: 0 100%;
-} 
+}
 
 .ws_bulframe img {
 	max-width:110px !important;
@@ -371,13 +371,13 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 	max-height: none;
 }
 
-#wowslider-container1 .ws_bullets a { 
+#wowslider-container1 .ws_bullets a {
 	width:13px;
 	height:13px;
 	background:url(bullet.png) left top;
 	background-size:13px 26px;
-	float: left; 
-	text-indent: -4000px; 
+	float: left;
+	text-indent: -4000px;
 	position:relative;
 	margin-left:7px;
 	color:transparent;
@@ -385,7 +385,7 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 
 #wowslider-container1 .ws_bullets a.ws_selbull, #wowslider-container1 .ws_bullets a:hover {
 	background-position: 0 100%;
-} 
+}
 
 #wowslider-container1  .ws_bullets {
     bottom: 20px;
@@ -454,17 +454,17 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 /*
 |--------------------------------------------------------------------------
 |  6.0 Thumbs
-|  
+|
 |--------------------------------------------------------------------------
 |
-| 
+|
 |
 */
 
 /* #Fullscreen layout
 =============================== */
 
-#wowslider-container1  .ws_thumbs { 
+#wowslider-container1  .ws_thumbs {
 	overflow:auto;
 	z-index:60;
 }
@@ -477,7 +477,7 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 
 #wowslider-container1 .ws_thumbs a {
 	position:relative;
-	text-indent: -4000px; 
+	text-indent: -4000px;
 	color:transparent;
 	opacity:0.85;
 	text-decoration: none;
@@ -530,7 +530,7 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 
 #wowslider-container1.boxed-wow.has-thumbs .ws_images {
 	margin-bottom: 8.8em;
-} 
+}
 
 #wowslider-container1.boxed-wow .ws_thumbs img {
 	text-decoration: none;
@@ -540,7 +540,7 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 
 #wowslider-container1.boxed-wow .ws_thumbs a {
 	position:relative;
-	text-indent: -4000px; 
+	text-indent: -4000px;
 	color:transparent;
 	opacity:0.85;
 	text-decoration: none;
@@ -591,10 +591,10 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 /*
 |--------------------------------------------------------------------------
 |  7.0 Title
-|  
+|
 |--------------------------------------------------------------------------
 |
-| 
+|
 |
 */
 
@@ -636,10 +636,10 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 /*
 |--------------------------------------------------------------------------
 |  8.0 Responsive
-|  
+|
 |--------------------------------------------------------------------------
 |
-| 
+|
 |
 */
 
@@ -656,4 +656,3 @@ url('fullscreen.svg#ws-fullscreen') format('svg');
 		display: none
 	}
 }
-

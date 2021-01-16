@@ -8,6 +8,12 @@
 {% endblock head_title %}
 
 
+{% block head_extra %}
+  <!-- Revolution Slider -->
+  <link rel="stylesheet" href="{% static "baseApp/plugins/rs-plugin/css/settings.css" %}">
+{% endblock head_extra %}
+
+
 {% block body_content %}
 <!-- Main Content -->
 <div id="Content">
@@ -329,3 +335,275 @@
     </div>
 </div>
 {% endblock body_content %}
+
+{% block body_JS %}
+<script src="{% static "baseApp/plugins/rs-plugin/js/jquery.themepunch.tools.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.video.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js" %}"></script>
+<script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js" %}"></script>
+
+<script>
+    var tpj = jQuery;
+    tpj.noConflict();
+    var revapi1;
+    tpj(document).ready(function() {
+        if (tpj("#rev_slider_1_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_1_1");
+        } else {
+            revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                sliderType: "standard",
+                sliderLayout: "auto",
+                dottedOverlay: "none",
+                delay: 3000,
+                gridwidth: 620,
+                gridheight: 450,
+                lazyType: "none",
+                shadow: 0,
+                spinner: "sipnner3",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: "off",
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
+
+<script>
+    var tpj = jQuery;
+    tpj.noConflict();
+    var revapi2;
+    tpj(document).ready(function() {
+        if (tpj("#rev_slider_2_6").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_2_6");
+        } else {
+            revapi2 = tpj("#rev_slider_2_6").show().revolution({
+                sliderType: "standard",
+                sliderLayout: "auto",
+                dottedOverlay: "none",
+                delay: 9000,
+                gridwidth: 620,
+                gridheight: 450,
+                lazyType: "none",
+                shadow: 0,
+                spinner: "sipnner3",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: "off",
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
+
+<script>
+    var tpj = jQuery;
+    tpj.noConflict();
+    var revapi6;
+    tpj(document).ready(function() {
+        if (tpj("#rev_slider_6_5").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_6_5");
+        } else {
+            revapi6 = tpj("#rev_slider_6_5").show().revolution({
+                sliderType: "standard",
+                sliderLayout: "auto",
+                dottedOverlay: "none",
+                delay: 9000,
+                gridwidth: 400,
+                gridheight: 290,
+                lazyType: "none",
+                shadow: 0,
+                spinner: "sipnner3",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: "off",
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
+
+<script>
+    var tpj = jQuery;
+    tpj.noConflict();
+    var revapi5;
+    tpj(document).ready(function() {
+        if (tpj("#rev_slider_5_4").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_5_4");
+        } else {
+            revapi5 = tpj("#rev_slider_5_4").show().revolution({
+                sliderType: "standard",
+                sliderLayout: "auto",
+                dottedOverlay: "none",
+                delay: 9000,
+                gridwidth: 400,
+                gridheight: 290,
+                lazyType: "none",
+                shadow: 0,
+                spinner: "sipnner3",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: "off",
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
+
+<script>
+    var tpj = jQuery;
+    tpj.noConflict();
+    var revapi4;
+    tpj(document).ready(function() {
+        if (tpj("#rev_slider_4_3").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_4_3");
+        } else {
+            revapi4 = tpj("#rev_slider_4_3").show().revolution({
+                sliderType: "standard",
+                sliderLayout: "auto",
+                dottedOverlay: "none",
+                delay: 9000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "on",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    }
+                },
+                gridwidth: 400,
+                gridheight: 290,
+                lazyType: "none",
+                shadow: 0,
+                spinner: "sipnner3",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: "off",
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
+
+<script>
+    var tpj = jQuery;
+    tpj.noConflict();
+    var revapi3;
+    tpj(document).ready(function() {
+        if (tpj("#rev_slider_3_2").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_3_2");
+        } else {
+            revapi3 = tpj("#rev_slider_3_2").show().revolution({
+                sliderType: "standard",
+                sliderLayout: "auto",
+                dottedOverlay: "none",
+                delay: 9000,
+                gridwidth: 400,
+                gridheight: 290,
+                lazyType: "none",
+                shadow: 0,
+                spinner: "sipnner3",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: "off",
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
+{% endblock body_JS %}

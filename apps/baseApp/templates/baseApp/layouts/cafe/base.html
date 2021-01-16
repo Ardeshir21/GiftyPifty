@@ -24,14 +24,15 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Parisienne:100,300,400,400italic,700'>
 
     <!-- CSS -->
+    <link rel='stylesheet' href="{% static 'baseApp/css/font-awesome.min.css' %}">
     <link rel='stylesheet' href="{% static 'baseApp/css/global.css' %}">
     <link rel='stylesheet' href="{% static 'baseApp/layouts/cafe/css/structure.css' %}">
     <link rel='stylesheet' href="{% static 'baseApp/layouts/cafe/css/cafe.css' %}">
     <link rel='stylesheet' href="{% static 'baseApp/layouts/cafe/css/custom.css' %}">
 
-    <!-- Revolution Slider -->
-    <link rel="stylesheet" href="{% static "baseApp/plugins/rs-plugin/css/settings.css" %}">
-
+    {% block head_extra %}
+      <!-- Extra CSS or JS -->
+    {% endblock head_extra %}
 </head>
 
 <body class="home style-simple layout-boxed mobile-tb-left button-stroke no-content-padding header-plain header-boxed minimalist-header sticky-header sticky-white subheader-title-left hide-title-area menuo-right footer-copy-center">
@@ -49,7 +50,7 @@
                             <div class="top_bar_left">
                                 <!-- Logo-->
                                 <div class="logo">
-                                    <a id="logo" href="index-cafe.html" title="BeCafe - BeTheme"> <img class="scale-with-grid" src="{% static "baseApp/layouts/cafe/images/cafe.png" %}"" alt="BeCafe - BeTheme" /> </a>
+                                    <a id="logo" href="index-cafe.html" title="BeCafe - BeTheme"> <img class="scale-with-grid" src="{% static "baseApp/layouts/cafe/images/cafe.png" %}" alt="BeCafe - BeTheme" /> </a>
                                 </div>
                                 <!-- Main menu-->
                                 <div class="menu_wrapper">
@@ -241,275 +242,6 @@
     <script src="{% static "baseApp/js/jquery.jplayer.min.js" %}"></script>
     <script src="{% static "baseApp/js/animations/animations.js" %}"></script>
     <script src="{% static "baseApp/js/scripts.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/jquery.themepunch.tools.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.video.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js" %}"></script>
-    <script src="{% static "baseApp/plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js" %}"></script>
-
-    <script>
-        var tpj = jQuery;
-        tpj.noConflict();
-        var revapi1;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_1_1").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_1_1");
-            } else {
-                revapi1 = tpj("#rev_slider_1_1").show().revolution({
-                    sliderType: "standard",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 3000,
-                    gridwidth: 620,
-                    gridheight: 450,
-                    lazyType: "none",
-                    shadow: 0,
-                    spinner: "sipnner3",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    disableProgressBar: "on",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    startWithSlide: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: "off",
-                    }
-                });
-            }
-        });
-        /*]]>*/
-    </script>
-
-    <script>
-        var tpj = jQuery;
-        tpj.noConflict();
-        var revapi2;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_2_6").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_2_6");
-            } else {
-                revapi2 = tpj("#rev_slider_2_6").show().revolution({
-                    sliderType: "standard",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    gridwidth: 620,
-                    gridheight: 450,
-                    lazyType: "none",
-                    shadow: 0,
-                    spinner: "sipnner3",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    disableProgressBar: "on",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    startWithSlide: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: "off",
-                    }
-                });
-            }
-        });
-        /*]]>*/
-    </script>
-
-    <script>
-        var tpj = jQuery;
-        tpj.noConflict();
-        var revapi6;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_6_5").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_6_5");
-            } else {
-                revapi6 = tpj("#rev_slider_6_5").show().revolution({
-                    sliderType: "standard",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    gridwidth: 400,
-                    gridheight: 290,
-                    lazyType: "none",
-                    shadow: 0,
-                    spinner: "sipnner3",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    disableProgressBar: "on",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    startWithSlide: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: "off",
-                    }
-                });
-            }
-        });
-        /*]]>*/
-    </script>
-
-    <script>
-        var tpj = jQuery;
-        tpj.noConflict();
-        var revapi5;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_5_4").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_5_4");
-            } else {
-                revapi5 = tpj("#rev_slider_5_4").show().revolution({
-                    sliderType: "standard",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    gridwidth: 400,
-                    gridheight: 290,
-                    lazyType: "none",
-                    shadow: 0,
-                    spinner: "sipnner3",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    disableProgressBar: "on",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    startWithSlide: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: "off",
-                    }
-                });
-            }
-        });
-        /*]]>*/
-    </script>
-
-    <script>
-        var tpj = jQuery;
-        tpj.noConflict();
-        var revapi4;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_4_3").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_4_3");
-            } else {
-                revapi4 = tpj("#rev_slider_4_3").show().revolution({
-                    sliderType: "standard",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    navigation: {
-                        keyboardNavigation: "off",
-                        keyboard_direction: "horizontal",
-                        mouseScrollNavigation: "off",
-                        onHoverStop: "off",
-                        touch: {
-                            touchenabled: "on",
-                            swipe_threshold: 75,
-                            swipe_min_touches: 1,
-                            swipe_direction: "horizontal",
-                            drag_block_vertical: false
-                        }
-                    },
-                    gridwidth: 400,
-                    gridheight: 290,
-                    lazyType: "none",
-                    shadow: 0,
-                    spinner: "sipnner3",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    disableProgressBar: "on",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    startWithSlide: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: "off",
-                    }
-                });
-            }
-        });
-        /*]]>*/
-    </script>
-
-    <script>
-        var tpj = jQuery;
-        tpj.noConflict();
-        var revapi3;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_3_2").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_3_2");
-            } else {
-                revapi3 = tpj("#rev_slider_3_2").show().revolution({
-                    sliderType: "standard",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    gridwidth: 400,
-                    gridheight: 290,
-                    lazyType: "none",
-                    shadow: 0,
-                    spinner: "sipnner3",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    disableProgressBar: "on",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    startWithSlide: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: "off",
-                    }
-                });
-            }
-        });
-        /*]]>*/
-    </script>
 
     <script>
         jQuery(window).load(function() {
@@ -526,6 +258,10 @@
             }
         });
     </script>
+
+    {% block body_JS %}
+      <!-- Any additional javascrpt -->
+    {% endblock body_JS %}
 </body>
 
 </html>

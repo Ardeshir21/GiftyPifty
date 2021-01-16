@@ -8,6 +8,14 @@
 {% endblock head_title %}
 
 
+{% block head_extra %}
+  <!-- WOW Slider -->
+  <link rel="stylesheet" type="text/css" href="{% static "baseApp/plugins/OwlCarousel/css/owl.carousel.min.css" %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static "baseApp/plugins/OwlCarousel/css/owl.theme.default.css" %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static "baseApp/plugins/OwlCarousel/css/animate.min.css" %}"/>
+{% endblock head_extra %}
+
+
 {% block body_content %}
 <!-- Main Content -->
 <div id="Content">
@@ -22,9 +30,7 @@
                             <div class="column one-second column_image ">
                                 <div class="image_frame no_link scale-with-grid no_border">
                                     <div class="image_wrapper">
-                                      {% for item in product.images.all %}
-                                        <img class="scale-with-grid" src="{{item.image}}" alt="" width="493" height="563" />
-                                      {% endfor %}
+                                      {% include "baseApp/layouts/cafe/product_Owl.html" %}
                                     </div>
                                 </div>
                             </div>
@@ -53,9 +59,31 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
 {% endblock body_content %}
+
+
+{% block body_JS %}
+  <script src="{% static "baseApp/plugins/OwlCarousel/js/jquery.min.js" %}"></script>
+  <script src="{% static "baseApp/plugins/OwlCarousel/js/owl.carousel.min.js" %}"></script>
+
+  <script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+      autoplay:true,
+      autoplayTimeout:5000,
+      autoplayHoverPause:true,
+      loop:true,
+      autoHeight:true,
+      items:1,
+      nav:true,
+      dots:true,
+      responsiveClass:true,
+      margin: 0,
+      smartSpeed: 1000,
+      navText: ['<i class="fad fa-backward fa-2x"></i>', '<i class="fad fa-forward fa-2x"></i>']
+    })
+  </script>
+{% endblock body_JS %}
