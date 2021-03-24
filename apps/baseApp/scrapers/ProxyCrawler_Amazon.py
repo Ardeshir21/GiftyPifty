@@ -67,7 +67,12 @@ class ProductPage():
         # Price
         price = body_dict['price']
         if price is not None:
-            price = float(price.replace('$', ''))
+            # remove dollar sign
+            price = price.replace('$', '')
+            # some prices are like this   29.98 - 34.88 $
+            if '-' in price:
+                price = price.split('-')[0].strip()
+            price = float(price)
 
         # Descripton: About this item - List of bullets
         description_list = body_dict['features']
